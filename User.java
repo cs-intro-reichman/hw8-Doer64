@@ -51,7 +51,7 @@
     /** Makes this user follow the given name. If successful, returns true. 
      *  If this user already follows the given name, or if the follows list is full, does nothing and returns false; */
     public boolean addFollowee(String name) {
-        if(fCount>=maxfCount || follows(name) == true){
+        if(fCount>=maxfCount || follows(name) || this.name.toLowerCase().equals(name.toLowerCase())){
             System.out.printf("%s cannot follow %s \n", this.name, name);
             return false;
         }
