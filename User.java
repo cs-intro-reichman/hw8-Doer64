@@ -52,7 +52,7 @@
      *  If this user already follows the given name, or if the follows list is full, does nothing and returns false; */
     public boolean addFollowee(String name) {
         if(fCount>=maxfCount || follows(name) == true){
-            System.out.printf("%s could not follow %s", this.name, name);
+            System.out.printf("%s could not follow %s \n", this.name, name);
             return false;
         }
         follows[fCount] = name;
